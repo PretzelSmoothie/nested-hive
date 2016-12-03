@@ -12,7 +12,8 @@
 
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "alerts"
 
     ]
 }

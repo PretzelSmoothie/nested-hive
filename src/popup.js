@@ -2,6 +2,22 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+document.addEventListener('DOMContentLoaded', onInit, false);
+var output;
+function onInit(){
+  alert("running");
+  output = document.getElementById("test");
+
+  output.addEventListener('click', function() {
+    alert("made it!");
+    getCurrentTabUrl(function(url) {
+
+    });
+  });
+
+}
+
+
 /**
  * Get the current URL.
  *
@@ -11,9 +27,7 @@
 
  /* When the user clicks on the button,
  toggle between hiding and showing the dropdown content */
-
-
-
+//console.log(output);
 
 
 
