@@ -11,17 +11,17 @@ function onInit(){
   update = document.getElementById("update");
   updateMe = document.getElementById("updateMe");
 
-  /*update.addEventListener('click', function() {
+  update.addEventListener('click', function() {
     getCurrentTabUrl(function(url) {
       //set updateMe URL
       updateMe = document.getElementById("linkToUpdate");
       updateMe.setAttribute("href", url);
     });
-  });*/
-
+  });
+/*
   update.addEventListener('click', function () {
     getTab();
-  });
+  });*/
 
 }
 
@@ -50,6 +50,7 @@ function getCurrentTabUrl(callback) {
   chrome.tabs.query(queryInfo, function(tabs) {
 
     var tab = tabs[0];
+    for(int i = 0; i < tabs.length; i++) console.log(tabs[i]);
 
     // A tab is a plain object that provides information about the tab.
     // See https://developer.chrome.com/extensions/tabs#type-Tab
