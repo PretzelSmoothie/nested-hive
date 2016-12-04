@@ -10,7 +10,7 @@ function onInit(){
   alert("running");
   update = document.getElementById("update");
   updateMe = document.getElementById("updateMe");
-
+  chrome.extension.getBackgroundPage().console.log("hello");
   update.addEventListener('click', function() {
     getCurrentTabUrl(function(url) {
       //set updateMe URL
@@ -18,10 +18,7 @@ function onInit(){
       updateMe.setAttribute("href", url);
     });
   });
-/*
-  update.addEventListener('click', function () {
-    getTab();
-  });*/
+
 
 }
 
@@ -43,14 +40,13 @@ function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
   var queryInfo = {
-    active: true,
-    currentWindow: true
+  //  active: true,
+  //  currentWindow: true
   };
 
   chrome.tabs.query(queryInfo, function(tabs) {
 
     var tab = tabs[0];
-    for(int i = 0; i < tabs.length; i++) console.log(tabs[i]);
 
     // A tab is a plain object that provides information about the tab.
     // See https://developer.chrome.com/extensions/tabs#type-Tab
