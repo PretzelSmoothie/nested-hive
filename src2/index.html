@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="css/global-min.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Save my Tabs</h1>
+				<a href="#" id="check" title="None">None</a>
+                <div id="counter" class="counter"></div>
+			</header>
+			<section id="result">
+				<form action="" name="form_links">
+					<fieldset class="list">
+						<ul id="urlList"></ul>
+					</fieldset>
+					<fieldset>
+						<div id="add"class="btn favorites">
+							<span class="icon">&nbsp;</span>
+							<input type="button" value="Add favorites">
+						</div>
+						<div id="copy" class="btn clipboard">
+							<span class="icon">&nbsp;</span>
+							<input type="button" value="Copy to clipboard"><!--value change to "It's Copied!"-->
+						</div>
+					</fieldset>
+					<fieldset id="bookmark" style="display:none">
+						<h2>Bookmark list</h2>
+						<select id="bookmarkList"></select>
+						<input id="newfolder" type="text" placeholder="Name to folder" style="display:none">
+						<div id="create" class="btn new">
+							<span class="icon">&nbsp;</span>
+							<input type="button" value="New folder">
+						</div>
+						<div id="save" class="btn save">
+							<span class="icon">&nbsp;</span>
+							<input type="button" value="Save">
+						</div>
+						<div id="cancel" class="btn cancel">
+							<span class="icon">&nbsp;</span>
+							<input type="button" value="Cancel">
+						</div>
+					</fieldset>
+				</form>
+			</section>
+			<alert id="notification" class="" style="display:none"></alert>
+			<footer>
+				<p>About <a href="https://github.com/wsiqueira/savemytabs-chrome-ext/wiki" target="_blank" title="Save My Tabs">Save My Tabs</a></p>
+			</footer>
+		</main>
+		<script src="js/init.js"></script>
+	</body>
+</html>
